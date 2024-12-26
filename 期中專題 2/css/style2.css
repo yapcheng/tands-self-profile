@@ -1,0 +1,502 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header,body,footer {
+    font-family: "Microsoft JhengHei", "PingFang TC", "Noto Sans TC", "Heiti TC", "Arial", sans-serif;
+}
+ /* Base styling for all sections */
+ section {
+    opacity: 0; /* Initially invisible */
+    transform: translateY(30px); /* Start off below */
+    animation-duration: 1.5s; /* Set the animation duration */
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards; /* Keep the final state after animation */
+    margin: 40px 0;
+}
+
+/* Animation for the fade-in and slide-up effect */
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); /* Start position */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End position */
+    }
+}
+
+/* Apply animation to each section */
+.Sky1, .Sky, .Sky2, .text {
+    animation-name: fadeSlideUp;
+}
+
+/* For specific sections, you can modify timing to create staggered effects */
+.Sky1 {
+    animation-delay: 0.7s; /* Delay the appearance of the Sky1 section */
+}
+
+.Sky {
+    animation-delay: 0.9s; /* Delay the appearance of the Sky section */
+}
+
+.Sky2 {
+    animation-delay: 1s; /* Delay the appearance of the Sky2 section */
+}
+
+.text {
+    animation-delay: 1.3s; /* Delay the appearance of the text section */
+}
+
+/* Styling for header and other elements */
+header {
+    font-family: "Microsoft JhengHei", "PingFang TC", "Arial", sans-serif;
+    background-color: #231C1A;
+    height: 80px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+h1 {
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+header li{
+    display: inline;
+    margin-right: 4vw;
+    padding: 2px;
+    border: 2px;
+}
+header ul{
+    position: absolute;
+    right: 5vw;
+    top: 0;
+    line-height: 80px;
+}
+h1{
+    color: white;
+    position: absolute;
+    left: 120px;
+    top: 0;
+    line-height: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header a{
+    color: white;
+    text-decoration: none;
+}
+header a:hover{
+    text-decoration: underline;
+    font-size: larger;
+    color: wheat;
+}
+.Sky1{
+    background-color: rgb(101, 180, 212);
+    background-image: url("images/下午2.44\ 2024-10-27的影像.jpg");
+    background-size: cover;
+    color:  rgb(253, 253, 253);
+    height: 85vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 80px 100px;
+}
+
+.t1 {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Start off below the original position */
+    animation: slideUp 2s forwards; /* Animation to slide up */
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* Start below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at the normal position */
+    }
+}
+
+/* Styling for the h2 and h4 elements */
+h2, h4 {
+    color: #fefefe;
+    font-size: larger;
+}
+
+/* Styling for the <nav> list */
+nav {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+nav li {
+    padding: 5px 0;
+}
+
+.Sky1 h2{
+    color: rgb(255, 242, 0);
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    text-align: left;
+}
+.Sky1 img{
+    border: 3px rgb(202, 127, 52) solid;
+    width: 600px; 
+    height: 600px;
+    object-fit: cover; 
+    border-radius: 50px;
+}
+.Sky1 div h4{
+    color: rgb(255, 170, 0);
+    font-size: 20px;
+    text-align: left;
+    font-family:'Comic Sans MS', 'Brush Script MT',Sky1 div h4;
+}
+.Sky{
+    background-image: url(images/晚上10.09\ 2024-10-28的影像.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: bisque;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-size: 60px;
+    line-height: 1.8em;
+    font-family:'Comic Sans MS', 'Brush Script MT';
+    font-style: italic;
+    text-align: left;
+}
+/* Smooth scroll for navigation */
+html {
+    scroll-behavior: smooth;
+}
+
+/* News animation */
+.Sky2 h2 {
+    color: rgb(255, 242, 0);
+    font-size: 60px;
+    text-align: left;
+    font-family: 'Comic Sans MS', 'Brush Script MT';
+    font-style: italic;
+    position: relative;
+    animation: slideInLeft 3s forwards; /* Animation from left to right */
+}
+
+@keyframes slideInLeft {
+    0% {
+        left: -100%; /* Start off-screen to the left */
+    }
+    100% {
+        left: 0; /* End at the normal position */
+    }
+}
+
+/* Right-to-left animation for 'That's not all about me!' text */
+.Sky blockquote {
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Comic Sans MS', 'Brush Script MT';
+    font-style: italic;
+    color: #ff9f05;
+    position: relative;
+    animation: slideInRight 3s forwards; /* Animation from right to left */
+}
+
+@keyframes slideInRight {
+    0% {
+        right: -100%; /* Start off-screen to the right */
+    }
+    100% {
+        right: 0; /* End at the normal position */
+    }
+}
+
+/* List and button styling */
+.Sky2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(images/影像\ 20.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 85vh;
+    position: relative; /* Ensure the container is positioned */
+}
+.Sky2 img{
+    width: 400px;
+    height: 400px;
+    border-radius: 50px;
+    border: 2px rgb(143, 99, 49) solid;
+    margin: 20px;
+}
+.info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    background-size: cover;
+    font-size: 25px;
+    line-height: 2em;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ /* Smooth scroll for navigation */
+ html {
+    scroll-behavior: smooth;
+}
+
+/* News animation */
+.Sky2 h2 {
+    color: rgb(255, 242, 0);
+    font-size: 60px;
+    text-align: left;
+    font-family: 'Comic Sans MS', 'Brush Script MT';
+    font-style: italic;
+    position: relative;
+    animation: slideInLeft 3s forwards; /* Animation from left to right */
+}
+
+@keyframes slideInLeft {
+    0% {
+        left: -100%; /* Start off-screen to the left */
+    }
+    100% {
+        left: 0; /* End at the normal position */
+    }
+}
+.Sky2 li img{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    color: aliceblue;
+}
+.Sky2 li a{
+    text-decoration: none;
+    color: aliceblue;
+    margin-right: 4vw;
+    padding: 2px;
+    border: 2px;
+    font-size: 20px;
+    font-family:'Comic Sans MS', 'Brush Script MT',Sky h4;
+    font-style: italic;
+    display: inline;
+    justify-content: right;
+}
+.Sky2 ul{
+    right: 5vw;
+    top: 0;
+    line-height: 80px;
+}
+
+footer{
+    background-color:  #231C1A ;
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+footer p{
+    color: antiquewhite;
+    text-align: center;
+}
+
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
+  
+  :root {
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height) / 1.5);
+  }
+  
+  
+  body {
+    min-height: 100vh;
+    background: #212534;
+    display: flexbox;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+
+.text{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    height: 80vh;
+    opacity: 0; /* Initially hidden */
+    animation: fadeInSlideUp 2s forwards; /* Animation for the text section */
+    background-color: #fefefe;
+}
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* Start below the original position */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at the original position */
+    }
+}
+
+/* Hover bounce effect for buttons and text input */
+.操作面板 .按鈕, .操作面板 .文字欄 {
+    transition: all 0.3s ease;
+}
+
+.操作面板 .按鈕:hover, .操作面板 .文字欄:hover {
+    transform: scale(1.1);
+    animation: bounce 0.5s forwards; /* Bounce effect on hover */
+}
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    70% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.操作面板 {
+    width: 300px;
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+
+.輸入區域 {
+    display: flex;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.文字欄 {
+    flex-grow: 1;
+    border: none;
+    background-color: #F0F4F8;
+    padding: 10px 15px;
+    outline: none;
+    text-align: center; /* 使文字水平置中 */
+}
+
+.按鈕 {
+    background-color: aqua;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.清單 {
+    list-style-type: none;
+    padding: 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    flex-direction: column; /* 清單項目垂直排列 */
+    align-items: center; /* 使清單中的項目水平置中 */
+}
+
+.清單 li {
+    display: flex;
+    align-items: center; /* 使每一項目垂直置中 */
+}
+
+.清單 label {
+    flex-grow: 1;
+    text-align: center; /* 使每個標籤文字水平置中 */
+}
+
+.打勾方塊 {
+    margin-right: 15px;
+}
+
+.垃圾桶 {
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.垃圾桶:hover {
+    opacity: 1;
+}
+
+/* 手機裝置 */
+@media (max-width: 320px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+    header ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* 平板裝置 */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+    header ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    header li {
+        margin-right: 2vw;
+    }
+}
+
+/* 桌面裝置 */
+@media (min-width: 1280px) {
+    .container {
+        width: 80%;
+    }
+    header ul {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+}
